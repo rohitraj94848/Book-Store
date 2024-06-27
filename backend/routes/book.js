@@ -2,7 +2,7 @@ const router = require("express").Router();
 const User = require("../models/user");
 const jwt = require("jsonwebtoken");
 const Book = require("../models/book")
-const {authenticateToken} = require("./userAuth");
+const authenticateToken = require("./userAuth");
 
 //add book --admin
 // authenticateToken middleware ensures that the request is authenticated before proceeding to add a new book. It typically verifies a JWT token from the Authorization header and sets req.user with authenticated user information.

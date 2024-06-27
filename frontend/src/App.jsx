@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
@@ -8,11 +8,12 @@ import LogIn from './pages/LogIn';
 import SignUp from './pages/SignUp';
 import Cart from './pages/Cart';
 import Profile from './pages/Profile';
+import ViewBookDetails from './components/ViewBookDetails/ViewBookDetails';
 
 const App = () => {
   return (
     <div>
-      <Router>
+      
         <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
@@ -21,10 +22,11 @@ const App = () => {
           <Route path="/profile" element={<Profile />} />
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/LogIn" element={<LogIn />} />
+          <Route path="/view-book-details/:id" element={<ViewBookDetails />} />
           
         </Routes>
         <Footer />
-      </Router>
+      
     </div>
   );
 };
